@@ -41,3 +41,4 @@ function showToast(message){toast.textContent=message;toast.classList.add('show'
 document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('searchInput').value.trim();if(!q){showToast('Введіть слово або назву для пошуку.');return}const found=[...document.querySelectorAll('main h1,main h2,main h3,main p,.timeline-year,.timeline-title')].filter(el=>el.textContent.toLocaleLowerCase('uk').includes(q.toLocaleLowerCase('uk')));if(found.length){found[0].scrollIntoView({behavior:'smooth',block:'center'});found[0].style.outline='1px solid #c6b89d';setTimeout(()=>found[0].style.outline='',2500);showToast('Знайдено збігів на сторінці: '+found.length)}else showToast('Збігів на цій сторінці не знайдено. Спробуйте інший запит.')});
 </script>
 </body></html>
+google-site-verification: google838f5fd74c80a9a4.html
